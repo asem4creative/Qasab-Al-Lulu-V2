@@ -1,44 +1,17 @@
 /* Fonts */
-/* 200 - Extra Light */
-@font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 300 - Light */
-@font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* 400 - Regular */
 @font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-Regular.ttf') format('truetype');
+  font-family: "Cairo";
+  src: url("fonts/Cairo-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* 500 - Medium */
+/* 600 - SemiBold */
 @font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 600 - Semi Bold */
-@font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-SemiBold.ttf') format('truetype');
+  font-family: "Cairo";
+  src: url("fonts/Cairo-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -46,39 +19,21 @@
 
 /* 700 - Bold */
 @font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-Bold.ttf') format('truetype');
+  font-family: "Cairo";
+  src: url("fonts/Cairo-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* 800 - Extra Bold */
-@font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 900 - Black */
-@font-face {
-  font-family: 'Cairo';
-  src: url('fonts/Cairo-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 :root {
-  --default-font: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --navy-blue: #06416b;
   --navy-blue-rgb: 6, 65, 107;
-  --primary-gold: #C9B37E;
-
+  --primary-gold: #c9b37e;
 
   --white-color: #fff;
   --default-color: #121212;
@@ -86,9 +41,8 @@
   --bs-primary: #06416b;
   --bs-primary-rgb: 6, 65, 107;
 
-  --bs-secondary: #C9B37E;
+  --bs-secondary: #c9b37e;
   --bs-secondary-rgb: 201, 179, 126;
-
 }
 
 /* Smooth scroll */
@@ -124,7 +78,11 @@ a:hover {
   text-decoration: none;
 }
 
-li i{
+i {
+  color: var(--navy-blue);
+}
+
+svg {
   color: var(--navy-blue);
 }
 
@@ -134,7 +92,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--navy-blue);
+  color: var(--navy-blue) !important;
 }
 
 .mt-n5 {
@@ -153,7 +111,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -169,7 +126,7 @@ section,
   position: relative;
 }
 
-.section-title h1 {
+.section-title h2 {
   position: relative;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -178,7 +135,7 @@ section,
   text-shadow: 0 0 20px rgba(var(--navy-blue-rgb), 0.3);
 }
 
-.section-title h1:before {
+.section-title h2:before {
   content: "";
   position: absolute;
   display: block;
@@ -191,7 +148,7 @@ section,
   margin: auto;
 }
 
-.section-title h1:after {
+.section-title h2:after {
   content: "";
   position: absolute;
   display: block;
@@ -211,12 +168,14 @@ section,
 .pearl-background {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg,
-      #fffdf5 0%,
-      #f7f3e9 25%,
-      #fefaf0 50%,
-      #f2ede0 75%,
-      #fffdf5 100%);
+  background: linear-gradient(
+    135deg,
+    #fffdf5 0%,
+    #f7f3e9 25%,
+    #fefaf0 50%,
+    #f2ede0 75%,
+    #fffdf5 100%
+  );
   background-size: 400% 400%;
   animation: pearlAnimation 15s ease infinite;
   position: relative;
@@ -232,9 +191,11 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 50%,
-      rgba(255, 255, 255, 0.8) 0%,
-      transparent 60%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.8) 0%,
+    transparent 60%
+  );
   opacity: 0.4;
   pointer-events: none;
 }
@@ -276,8 +237,15 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(var(--navy-blue-rgb), 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--navy-blue-rgb), 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(
+      rgba(var(--navy-blue-rgb), 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(var(--navy-blue-rgb), 0.04) 1px,
+      transparent 1px
+    );
   background-size: 50px 50px;
   z-index: -1;
 }
@@ -417,6 +385,8 @@ section,
 
 .navbar-toggler .bi-list {
   display: block;
+  font-size: 2.5rem;
+  color: var(--white-color) !important;
 }
 
 .navbar-toggler .bi-x {
@@ -430,6 +400,7 @@ section,
 .navbar-toggler:not(.collapsed) .bi-x {
   display: block;
   font-size: 2.5rem;
+  color: var(--white-color) !important;
 }
 
 /*--------------------------------------------------------------
@@ -437,7 +408,10 @@ section,
 --------------------------------------------------------------*/
 .hero-overlay {
   background: color-mix(in srgb, #000820, transparent 80%);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
 }
@@ -486,6 +460,7 @@ section,
 .value-card {
   height: 100%;
   transition: all 0.4s ease;
+  color: var(--navy-blue);
 }
 
 .value-card:hover {
@@ -496,8 +471,12 @@ section,
 
 .value-card:hover .icon-box {
   background: var(--navy-blue);
-  color: var(--white-color);
+  color: var(--white-color) !important;
   box-shadow: 0 10px 20px rgba(var(--navy-blue-rgb), 0.3);
+}
+
+.value-card:hover .icon-box svg {
+  color: var(--white-color) !important;
 }
 
 .value-card .icon-box {
@@ -508,7 +487,11 @@ section,
 }
 
 .icon-box {
-  background: linear-gradient(135deg, rgba(var(--navy-blue-rgb), 0.05), transparent);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--navy-blue-rgb), 0.05),
+    transparent
+  );
   border: 1px solid rgba(var(--navy-blue-rgb), 0.3);
   border-radius: 16px;
   display: flex;
@@ -518,13 +501,12 @@ section,
   transition: 0.3s;
 }
 
-.contact-info-card .icon-box{
+.contact-info-card .icon-box {
   width: 55px;
   height: 55px;
   font-size: 1.4rem;
   margin-inline-end: 20px;
 }
-
 
 /*--------------------------------------------------------------
 #  Footer
@@ -582,8 +564,8 @@ section,
   /* Left for RTL preferred by some, or Right */
   width: 60px;
   height: 60px;
-  background-color: #25D366;
-  color: #fff;
+  background-color: #25d366;
+  color: #fff !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -593,6 +575,10 @@ section,
   z-index: 1000;
   transition: 0.3s;
   text-decoration: none;
+}
+
+.floating-whatsapp svg {
+  color: #fff !important;
 }
 
 .floating-whatsapp:hover {
