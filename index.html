@@ -93,26 +93,10 @@
     />
 
     <!-- ================== Main CSS (Lazy Load) ================== -->
-    <link
-      rel="preload"
-      href="assets/css/main.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="assets/css/main.css" />
-    </noscript>
+    <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ================== AOS CSS (Non-critical / Lazy) ================== -->
-    <link
-      rel="preload"
-      href="assets/vendor/aos/aos.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
-    </noscript>
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
   </head>
 
   <body
@@ -132,15 +116,9 @@
         <a class="navbar-brand" href="index.html">
           <img
             src="assets/img/logo-136.webp"
-            srcset="
-              assets/img/logo-136.webp 136w,
-              assets/img/logo-272.webp 272w
-            "
-            sizes="136px"
-            width="136"
-            height="48"
             alt="شعار المؤسسة"
-            fetchpriority="high"
+            height="48px"
+            loading="lazy"
           />
         </a>
 
@@ -234,61 +212,26 @@
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <!-- <img
+              <img
                 src="assets/img/services/slide-1.webp"
                 class="object-fit-cover w-100 vh-100"
                 alt="slide 1"
-              /> -->
-              <img
-                src="assets/img/services/slide-1-768.webp"
-                srcset="
-                  assets/img/services/slide-1-768.webp   768w,
-                  assets/img/services/slide-1-1440.webp 1440w
-                "
-                sizes="100vw"
-                width="1440"
-                height="900"
-                class="object-fit-cover w-100 vh-100"
-                alt="ٍSlide-1"
-                fetchpriority="high"
-                decoding="async"
+                loading="lazy"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="assets/img/services/slide-2-768.webp"
-                srcset="
-                  assets/img/services/slide-2-768.webp   768w,
-                  assets/img/services/slide-2-1440.webp 1440w
-                "
-                sizes="100vw"
-                width="1440"
-                height="900"
+                src="assets/img/services/slide-2.webp"
                 class="object-fit-cover w-100 vh-100"
-                alt="Slide-2"
-                fetchpriority="high"
-                decoding="async"
+                alt="slide 2"
+                loading="lazy"
               />
             </div>
             <div class="carousel-item">
-              <!-- <img
+              <img
                 src="assets/img/services/slide-3.webp"
                 class="object-fit-cover w-100 vh-100"
                 alt="Slide 3"
-              /> -->
-              <img
-                src="assets/img/services/slide-3-768.webp"
-                srcset="
-                  assets/img/services/slide-3-768.webp   768w,
-                  assets/img/services/slide-3-1440.webp 1440w
-                "
-                sizes="100vw"
-                width="1440"
-                height="900"
-                class="object-fit-cover w-100 vh-100"
-                alt="Slide-2"
-                fetchpriority="high"
-                decoding="async"
               />
             </div>
           </div>
@@ -2005,9 +1948,6 @@
       <div class="container">
         <img
           src="assets/img/logo-204.webp"
-          srcset="assets/img/logo-204.webp 204w, assets/img/logo-408.webp 408w"
-          sizes="204px"
-          width="204"
           height="72"
           alt="شعار المؤسسة"
           class="mb-3"
